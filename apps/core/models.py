@@ -11,7 +11,7 @@ class Project(models.Model):
         default_permissions = ()
         verbose_name = _("Project")
         verbose_name_plural = _("Projects")
-        ordering = ('position', )
+        ordering = ("position",)
 
     def _upload_to_path(self, filename):
         return f"projects/{self.url_name}/{filename}"
@@ -43,9 +43,9 @@ class ProjectImageRow(models.Model):
         default_permissions = ()
         verbose_name = _("Project image row")
         verbose_name_plural = _("Project image rows")
-        ordering = ('position', )
+        ordering = ("position",)
 
-    project = models.ForeignKey(Project, related_name='image_rows', on_delete=models.CASCADE)
+    project = models.ForeignKey(Project, related_name="image_rows", on_delete=models.CASCADE)
     position = models.PositiveIntegerField(
         default=0,
         blank=False,
@@ -64,12 +64,12 @@ class ProjectImage(models.Model):
         default_permissions = ()
         verbose_name = _("Project image")
         verbose_name_plural = _("Project images")
-        ordering = ('position', )
+        ordering = ("position",)
 
     def _upload_to_path(self, filename):
         return f"projects/{self.row.project.url_name}/{filename}"
 
-    row = models.ForeignKey(ProjectImageRow, related_name='images', on_delete=models.CASCADE)
+    row = models.ForeignKey(ProjectImageRow, related_name="images", on_delete=models.CASCADE)
     content = models.ImageField(upload_to=_upload_to_path)
     mime = models.CharField(max_length=100)
     position = models.PositiveIntegerField(

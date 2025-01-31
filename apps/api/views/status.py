@@ -15,7 +15,6 @@ class StatusManagement(View):
             timestamp=timezone.now(),
         )
 
-
         if settings.DEBUG:
             response.python = sys.version
             response.version = settings.VERSION

@@ -17,7 +17,7 @@ class PortalView(View):
     def get(self, request):
         context = {
             "site_setting": SiteSetting.objects.filter(is_active=True).first(),
-            "projects": Project.objects.filter(is_hidden=False),
+            "projects": Project.objects.filter(is_hidden=False).order_by("position", "created_at"),
         }
 
         return render(request, "portal/index.html", context)

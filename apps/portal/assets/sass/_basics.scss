@@ -1,0 +1,71 @@
+@use "variables";
+
+*, *:before, *:after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	line-height: 14pt;
+	font-size: 15pt;
+}
+
+html, body {
+	height: calc(100% - 30px);
+	font-family: variables.$main-font;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+main {
+	position: relative;
+	min-height: 800px;
+	z-index:100;
+	margin: 30px;
+}
+
+ul li {
+	list-style: none
+}
+
+ul li a {
+	display: inline-block;
+	position: relative;
+}
+
+.large {
+	font-size: 24pt;
+	font-weight: 500;
+	line-height: 28pt;
+}
+
+.large-text * {
+  font-size: 24pt;
+  font-weight: 500;
+  line-height: 28pt;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+	color: black;
+}
+
+nav a:hover {
+	text-decoration: underline;
+}
+
+@media only screen and (max-width: 800px) {
+	.large {
+		font-size: 16pt !important;
+		font-weight: 500;
+		line-height: 18pt !important;
+	}
+}

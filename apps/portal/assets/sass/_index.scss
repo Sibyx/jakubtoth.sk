@@ -1,0 +1,58 @@
+header {
+	float: left;
+	width: 50%;
+}
+
+nav {
+	float: right;
+	width: 50%;
+}
+
+.slider {
+	width: 42%;
+	height: auto;
+	position: absolute;
+	bottom: 30px;
+	left: 30px;
+}
+
+.slider img {
+	width: 100%;
+}
+
+.copy {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+	.slider {
+		width: calc(100% - 60px);
+		position: relative;
+		bottom: initial;
+		left: initial;
+		margin: 30px;
+	}
+
+	.copy {
+		top: initial;
+		text-align: right;
+		width: 100%;
+	}
+
+	main {
+		position: relative;
+		min-height: 50%;
+	}
+
+	.large {
+		font-size: 22pt;
+		line-height: 30pt;
+	}
+
+	nav {
+		text-align: right;
+	}
+}

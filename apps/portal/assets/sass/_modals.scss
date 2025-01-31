@@ -1,0 +1,35 @@
+.modal {
+	position: absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width: 100%;
+	z-index: 101;
+	background-color: #fff;
+	visibility: hidden;
+	display: none;
+	opacity: 0;
+	padding: 0;
+	transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+.modal.active {
+	opacity: 1;
+	display: initial;
+	visibility: visible;
+	transition: opacity 0.5s;
+}
+
+.modal footer {
+	clear: both;
+	margin: 30px;
+}
+
+.close {
+	text-transform: none;
+	font-size: 30pt;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 30px;
+}

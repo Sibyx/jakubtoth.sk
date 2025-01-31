@@ -1,0 +1,36 @@
+.detail header {
+	width: calc(100% - 60px);
+	margin: 240px 30px 30px 30px;
+}
+
+.detail header h2 {
+	float: left;
+	width: 50%;
+}
+
+.detail header a {
+	float: right;
+}
+
+.detail p {
+	margin: 30px;
+	clear: both;
+}
+
+@media only screen and (max-width: 800px) {
+	.detail header {
+		width: calc(100% - 60px);
+		margin: 30px;
+	}
+
+	.detail header h2 {
+		float: initial;
+	}
+
+	.detail header a {
+		margin: 30px;
+		text-align: center;
+		float: initial;
+		display: block;
+	}
+}

@@ -1,0 +1,30 @@
+#modal-projects h2 {
+	margin: 30px;
+}
+
+ul.gallery li {
+	display: inline-block;
+	width: calc(calc(100% - 120px) / 3);
+	float: left;
+	margin-left: 30px;
+	margin-bottom: 60px;
+}
+
+figure img {
+	width: 100%;
+	height: auto;
+}
+
+figcaption {
+	margin-top: 15px;
+	text-align: right;
+}
+
+@media only screen and (max-width: 800px) {
+	ul.gallery li {
+		width: calc(100% - 60px);
+		margin-bottom: 30px;
+	}
+}
+
+

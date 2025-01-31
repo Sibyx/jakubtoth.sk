@@ -1,0 +1,194 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Jakub Tóth</title>
+	<meta name="description" content="{{ site_setting.site_description }}">
+	<meta name="keywords" content="{{ site_setting.site_keywords }}">
+	<meta name="author" content="Jakub Tóth">
+	<meta name="theme-color" content="#ffffff">
+	<script src="{% static 'portal.min.js' %}"></script>
+	<link rel="icon" type="image/png" href="{% static 'favicon/favicon.ico' %}"/>
+
+	{% if not DEBUG %}
+		<script type="text/javascript">
+			var _paq = window._paq = window._paq || [];
+			_paq.push(['trackPageView']);
+			_paq.push(['enableLinkTracking']);
+			(function() {
+				var u="https://analytics.jakubdubec.me/";
+				_paq.push(['setTrackerUrl', u+'matomo.php']);
+				_paq.push(['setSiteId', '6']);
+				var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+				g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+			})();
+		</script>
+	{% endif %}
+</head>
+<body>
+<main>
+	<header>
+		<h1 class="large">
+			Jakub Tóth<br>
+			Komunikačný,<br>
+			priestorový<br>
+			&amp; grafický dizajn.
+		</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><a class="large" href="#modal-projects">Projekty</a></li>
+			<li><a class="large" href="#modal-info">Info</a></li>
+			<li><a class="large" href="#modal-contact">Kontakt</a></li>
+			<li>
+				<a class="large" href="https://www.instagram.com/jasomtoth/" target="_blank">Instagram</a>
+			</li>
+		</ul>
+	</nav>
+</main>
+
+<div class="slider">
+	<img alt="Intro GIF" src="{{ site_setting.intro_image.url }}">
+</div>
+
+<div class="copy">
+	<span class="large">&copy; {% now 'Y' %}</span>
+</div>
+
+<section id="modal-projects" class="modal">
+	<h2 class="large" style="margin-bottom: 80px;">Projekty</h2>
+	<a href="#" class="close">&#x2715;</a>
+
+	<ul class="gallery">
+	{% for project in projects %}
+		<li>
+			<a href="#detail-{{ project.url_name }}">
+				<figure>
+					<img src="{{ project.cover.url }}" alt="N89 – Cesta k slobode">
+					<figcaption>
+						{{ project.title }}<br/>
+						{{ project.subtitle }}, {{ project.year }}
+					</figcaption>
+				</figure>
+			</a>
+		</li>
+	{% endfor %}
+	</ul>
+
+	<footer>
+		&copy; {% now 'Y' %} Jakub Tóth, Všetky práva vyhradené.
+	</footer>
+</section>
+
+{% for project in projects %}
+	<section id="detail-{{ project.url_name }}" class="detail modal">
+		<header>
+			<h2 class="large">
+				{{ project.title }}<br/>
+				{{ project.subtitle }}, {{ project.year }}
+			</h2>
+
+			<a href="#description-{{ project.url_name }}" class="large">
+				popis projektu ↓
+			</a>
+		</header>
+
+		<div class="row half">
+			<div class="large-text">
+				{{ project.text_top_preview }}
+			</div>
+		</div>
+
+		<a href="#modal-projects" class="close">&#x2715;</a>
+
+		{% for row in project.image_rows.all %}
+			<div class="row {% if row.images.count == 1 %}full{% else %}half{% endif %}">
+			{% for image in row.images.all %}
+				<img src="{{ image.content.url }}">
+			{% endfor %}
+			</div>
+		{% endfor %}
+
+		<div class="row half" id="description-{{ project.url_name }}">
+			<div class="large-text">
+			{{ project.text_bottom_left_preview }}
+			</div>
+			<div class="large-text">
+				{{ project.text_bottom_right_preview }}
+
+				<a href="#detail-{{ project.url_name }}" class="large" style="text-align: right; display: block;">
+					na začiatok ↑
+				</a>
+			</div>
+		</div>
+
+		<footer>
+			&copy; {% now 'Y' %} Jakub Tóth, Všetky práva vyhradené.
+		</footer>
+	</section>
+
+{% endfor %}
+
+
+
+<section id="modal-info" class="modal">
+	<h2 class="large" style="margin-bottom: 80px;">Jakub Tóth</h2>
+	<a href="#" class="close">&#x2715;</a>
+	<div class="row half">
+		<div class="large-text">
+			{{ site_setting.info_left_preview }}
+		</div>
+		<div class="large-text">
+			{{ site_setting.info_right_preview }}
+		</div>
+	</div>
+</section>
+
+<section id="modal-contact" class="modal">
+	<h2 class="large" style="margin-bottom: 80px;">Kontakt</h2>
+	<a href="#" class="close">&#x2715;</a>
+
+	<div class="row full">
+		<div>
+			<p class="large">
+				Jakub Tóth<br/>
+				Výtvarník & grafický dizajnér
+			</p>
+
+			<br/>
+
+			<h3 class="large">Nová spolupráca:</h3>
+			<p class="large">
+				jasomtoth@gmail.com<br/>
+				+421 918 518 708
+			</p>
+
+			<br/>
+
+			<h3 class="large">Adresa ateliéru:</h3>
+			<p class="large">
+				Nová Cvernovka, Račianská 80,<br/>
+				Bratislava 831 02, Slovensko<br/>
+				<a
+						class="large"
+						target="_blank"
+						href="https://www.google.sk/maps/place/Ateli%C3%A9r+Amulet/@48.1835429,17.129861,17z/data=!4m9!1m2!2m1!1sNov%C3%A1+Cvernovka,+Ra%C4%8Diansk%C3%A1+80,+Bratislava+831+02,+Slovensko!3m5!1s0x476c8eccd19813c3:0xed22951ec8da5bcd!8m2!3d48.1839441!4d17.1324691!15sCj1Ob3bDoSBDdmVybm92a2EsIFJhxI1pYW5za8OhIDgwLCBCcmF0aXNsYXZhIDgzMSAwMiwgU2xvdmVuc2tvkgEPY3VsdHVyYWxfY2VudGVy">
+					mapa ←
+				</a>
+			</p>
+
+			<br/>
+
+			<h3 class="large">Sociálne spojenie:</h3>
+			<a class="large" href="https://www.instagram.com/jasomtoth/" target="_blank">Instagram</a>
+		</div>
+	</div>
+</section>
+
+{#<script src="navigation.js"></script>#}
+</body>
+</html>

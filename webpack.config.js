@@ -1,6 +1,7 @@
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -73,5 +74,13 @@ module.exports = {
 	plugins: [
 		// Cleans output directory before each build
 		new CleanWebpackPlugin(),
+		new CopyWebpackPlugin({
+			patterns: [
+				{
+					from: path.resolve(__dirname, 'apps', 'portal', 'assets', 'favicon.ico'),
+					to: path.resolve(__dirname, 'apps', 'portal', 'static', 'favicon.ico'),
+				},
+			],
+		}),
 	],
 };

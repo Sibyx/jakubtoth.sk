@@ -27,24 +27,26 @@ nav {
 	margin: 30px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
 	.slider {
-		width: calc(100% - 60px);
+		width: calc(100% - 20px);
 		position: relative;
 		bottom: initial;
 		left: initial;
-		margin: 30px;
+		margin: 10px;
 	}
 
 	.copy {
 		top: initial;
 		text-align: right;
 		width: 100%;
+	  	margin: 10px;
 	}
 
 	main {
 		position: relative;
 		min-height: 50%;
+	  	margin: 10px;
 	}
 
 	nav {

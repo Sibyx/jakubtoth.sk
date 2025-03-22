@@ -37,15 +37,15 @@ ul li a {
 }
 
 .large {
-	font-size: 24pt;
-	font-weight: 500;
-	line-height: 28pt;
+  font-size: clamp(1rem, 1.5vw + 0.8rem, 2rem); // ~16px to ~32px
+  font-weight: 500;
+  line-height: clamp(1.4rem, 1.5vw + 1rem, 2.4rem); // ~22px to ~38px
 }
 
 .large-text * {
-  font-size: 24pt;
+  font-size: clamp(1rem, 1.5vw + 0.8rem, 2rem);
   font-weight: 500;
-  line-height: 28pt;
+  line-height: clamp(1.4rem, 1.5vw + 1rem, 2.4rem);
 }
 
 a {
@@ -60,12 +60,4 @@ a:hover {
 
 nav a:hover {
 	text-decoration: underline;
-}
-
-@media only screen and (max-width: 800px) {
-	.large {
-		font-size: 16pt !important;
-		font-weight: 500;
-		line-height: 18pt !important;
-	}
 }

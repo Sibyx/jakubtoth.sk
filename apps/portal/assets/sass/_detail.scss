@@ -17,7 +17,7 @@
 	clear: both;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
 	.detail header {
 		width: calc(100% - 60px);
 		margin: 30px;
@@ -29,7 +29,7 @@
 
 	.detail header a {
 		margin: 30px;
-		text-align: center;
+		text-align: right;
 		float: initial;
 		display: block;
 	}

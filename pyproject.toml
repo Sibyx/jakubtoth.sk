@@ -2,7 +2,7 @@
 name = "jakubtoth"
 version = "0.1.0"
 description = "Jakub Toth personal portfolio"
-authors = ["Jakub Dubec <jakub.dubec@gmail.com>"]
+authors = ["Jakub Dubec <hello@jakubdubec.me>"]
 
 [tool.poetry.dependencies]
 python = "^3.13"

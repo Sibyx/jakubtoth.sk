@@ -21,11 +21,17 @@ figcaption {
   	line-height: 1.4rem;
 }
 
+div.project-container {
+  padding: 0 clamp(200px, 10vw, 300px);
+}
+
 @media only screen and (max-width: 1000px) {
 	ul.gallery li {
 		width: calc(100% - 60px);
 		margin-bottom: 30px;
 	}
+
+  	div.project-container {
+	  padding: 0 !important;
+	}
 }
-
-

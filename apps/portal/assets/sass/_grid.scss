@@ -28,11 +28,18 @@ div.row p {
 }
 
 @media only screen and (max-width: 1000px) {
+	div.full img, div.full div {
+	  width: calc(100% - 20px);
+	  margin-left: 10px;
+	  margin-right: 10px;
+	  margin-bottom: 10px;
+	}
+
 	div.half img, div.half div {
-		width: calc(100% - 60px);
-		margin-left: 30px;
-		margin-right: 30px;
-		margin-bottom: 30px;
+		width: calc(100% - 20px);
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-bottom: 10px;
 		display: inline-block;
 		float: left;
 	}

@@ -105,13 +105,15 @@
 
 		<a href="#modal-projects" class="close">&#x2715;</a>
 
-		{% for row in project.image_rows.all %}
-			<div class="row {% if row.images.count == 1 %}full{% else %}half{% endif %}">
-			{% for image in row.images.all %}
-				<img src="{{ image.content.url }}">
+		<div class="project-container">
+			{% for row in project.image_rows.all %}
+				<div class="row {% if row.images.count == 1 %}full{% else %}half{% endif %}">
+					{% for image in row.images.all %}
+						<img src="{{ image.content.url }}">
+					{% endfor %}
+				</div>
 			{% endfor %}
-			</div>
-		{% endfor %}
+		</div>
 
 		<div class="row half" id="description-{{ project.url_name }}">
 			<div class="large-text">

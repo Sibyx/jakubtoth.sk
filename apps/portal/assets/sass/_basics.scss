@@ -37,15 +37,15 @@ ul li a {
 }
 
 .large {
-  font-size: clamp(1rem, 1.5vw + 0.8rem, 2rem); // ~16px to ~32px
+  font-size: clamp(1rem, 1.3vw + 0.3rem, 1.8rem); // ~16px to ~32px
   font-weight: 500;
-  line-height: clamp(1.4rem, 1.5vw + 1rem, 2.4rem); // ~22px to ~38px
+  line-height: clamp(1.4rem, 1.3vw + 0.5rem, 2.2rem); // ~22px to ~38px
 }
 
 .large-text * {
-  font-size: clamp(1rem, 1.5vw + 0.8rem, 2rem);
+  font-size: clamp(1rem, 1.3vw + 0.3rem, 1.8rem);
   font-weight: 500;
-  line-height: clamp(1.4rem, 1.5vw + 1rem, 2.4rem);
+  line-height: clamp(1.4rem, 1.3vw + 0.5rem, 2.2rem);
 }
 
 a {
@@ -60,4 +60,23 @@ a:hover {
 
 nav a:hover {
 	text-decoration: underline;
+}
+
+.svg-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svg-icon svg {
+  width: 1em;          /* This makes SVG scalable relative to the font-size */
+  height: 1em;         /* Keeps SVG dimensions proportional */
+  vertical-align: middle; /* Aligns vertically with surrounding text */
+  fill: currentColor;  /* Optional: SVG color matches the surrounding text color */
+}
+
+.svg-icon svg .st0 {
+  fill: none;
+  stroke: #231f20;
+  stroke-width: 2px;
 }

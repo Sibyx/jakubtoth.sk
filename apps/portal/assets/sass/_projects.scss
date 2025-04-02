@@ -27,12 +27,18 @@ figcaption {
 }
 
 div.project-container {
-  padding: 0 clamp(200px, 10vw, 300px);
+  margin-top: 15rem;
+  padding: 0 clamp(50px, 10vw, 400px);
 }
 
 @media only screen and (max-width: 1000px) {
+	#modal-projects h2 {
+	  margin: 10px;
+	}
+
 	ul.gallery {
 	  grid-template-columns: 1fr;
+	  margin: 10px;
 	}
 
   	div.project-container {

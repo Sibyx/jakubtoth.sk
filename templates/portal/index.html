@@ -61,7 +61,12 @@
 
 <section id="modal-projects" class="modal">
 	<h2 class="large" style="margin-bottom: 80px;">Projekty</h2>
-	<a href="#" class="close">&#x2715;</a>
+	<a href="#" class="close svg-icon">
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 21.59 21.59">
+			<line class="st0" x1="1.13" y1="1.13" x2="20.45" y2="20.45"></line>
+			<line class="st0" x1="20.45" y1="1.13" x2="1.13" y2="20.45"></line>
+		</svg>
+	</a>
 
 	<ul class="gallery">
 	{% for project in projects %}
@@ -92,8 +97,12 @@
 				{{ project.subtitle }}, {{ project.year }}
 			</h2>
 
-			<a href="#description-{{ project.url_name }}" class="large">
-				popis projektu ↓
+			<a href="#description-{{ project.url_name }}" class="large svg-icon">
+				popis projektu
+				<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 12.35 14.78">
+					<polyline class="st0" points="1.24 8.61 6.19 13.56 11.35 8.4"></polyline>
+					<line class="st0" x1="6.19" y1="13.56" x2="6.19" y2=".93"></line>
+				</svg>
 			</a>
 		</header>
 
@@ -103,7 +112,12 @@
 			</div>
 		</div>
 
-		<a href="#modal-projects" class="close">&#x2715;</a>
+		<a href="#modal-projects" class="close svg-icon">
+			<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 21.59 21.59">
+				<line class="st0" x1="1.13" y1="1.13" x2="20.45" y2="20.45"></line>
+				<line class="st0" x1="20.45" y1="1.13" x2="1.13" y2="20.45"></line>
+			</svg>
+		</a>
 
 		<div class="project-container">
 			{% for row in project.image_rows.all %}
@@ -139,7 +153,12 @@
 
 <section id="modal-info" class="modal">
 	<h2 class="large" style="margin-bottom: 80px;">Jakub Tóth</h2>
-	<a href="#" class="close">&#x2715;</a>
+	<a href="#" class="close svg-icon">
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 21.59 21.59">
+			<line class="st0" x1="1.13" y1="1.13" x2="20.45" y2="20.45"></line>
+			<line class="st0" x1="20.45" y1="1.13" x2="1.13" y2="20.45"></line>
+		</svg>
+	</a>
 	<div class="row half">
 		<div class="large-text">
 			{{ site_setting.info_left_preview }}
@@ -152,7 +171,12 @@
 
 <section id="modal-contact" class="modal">
 	<h2 class="large" style="margin-bottom: 80px;">Kontakt</h2>
-	<a href="#" class="close">&#x2715;</a>
+	<a href="#" class="close svg-icon">
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 21.59 21.59">
+			<line class="st0" x1="1.13" y1="1.13" x2="20.45" y2="20.45"></line>
+			<line class="st0" x1="20.45" y1="1.13" x2="1.13" y2="20.45"></line>
+		</svg>
+	</a>
 
 	<div class="row full">
 		<div>

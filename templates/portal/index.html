@@ -12,7 +12,7 @@
 	<meta name="author" content="Jakub Tóth">
 	<meta name="theme-color" content="#ffffff">
 	<script src="{% static 'portal.min.js' %}"></script>
-	<link rel="icon" type="image/png" href="{% static '../../apps/portal/assets/favicon.ico' %}"/>
+	<link rel="icon" type="image/png" href="{% static 'assets/favicon.ico' %}"/>
 
 	{% if not DEBUG %}
 		<script type="text/javascript">
@@ -34,9 +34,8 @@
 	<header>
 		<h1 class="large">
 			Jakub Tóth<br>
-			Komunikačný,<br>
-			priestorový<br>
-			&amp; grafický dizajn.
+			Architektúra<br>
+			Grafický dizajn
 		</h1>
 	</header>
 	<nav>
@@ -61,12 +60,7 @@
 
 <section id="modal-projects" class="modal">
 	<h2 class="large" style="margin-bottom: 80px;">Projekty</h2>
-	<a href="#" class="close svg-icon">
-		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 21.59 21.59">
-			<line class="st0" x1="1.13" y1="1.13" x2="20.45" y2="20.45"></line>
-			<line class="st0" x1="20.45" y1="1.13" x2="1.13" y2="20.45"></line>
-		</svg>
-	</a>
+	<a href="#" class="close rethink-sans">×</a>
 
 	<ul class="gallery">
 	{% for project in projects %}
@@ -97,12 +91,8 @@
 				{{ project.subtitle }}, {{ project.year }}
 			</h2>
 
-			<a href="#description-{{ project.url_name }}" class="large svg-icon">
-				popis projektu
-				<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 12.35 14.78">
-					<polyline class="st0" points="1.24 8.61 6.19 13.56 11.35 8.4"></polyline>
-					<line class="st0" x1="6.19" y1="13.56" x2="6.19" y2=".93"></line>
-				</svg>
+			<a href="#description-{{ project.url_name }}" class="large">
+				popis projektu <span class="rethink-sans large">↓</span>
 			</a>
 		</header>
 
@@ -112,12 +102,7 @@
 			</div>
 		</div>
 
-		<a href="#modal-projects" class="close svg-icon">
-			<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 21.59 21.59">
-				<line class="st0" x1="1.13" y1="1.13" x2="20.45" y2="20.45"></line>
-				<line class="st0" x1="20.45" y1="1.13" x2="1.13" y2="20.45"></line>
-			</svg>
-		</a>
+		<a href="#modal-projects" class="close rethink-sans">×</a>
 
 		<div class="project-container">
 			{% for row in project.image_rows.all %}
@@ -135,30 +120,28 @@
 			</div>
 			<div class="large-text">
 				{{ project.text_bottom_right_preview }}
-
-				<a href="#detail-{{ project.url_name }}" class="large">
-					na začiatok ↑
-				</a>
 			</div>
 		</div>
 
-		<footer>
+	<footer>
+		<div class="footer" style="width: 60%; line-height: 1.5em;">
 			&copy; {% now 'Y' %} Jakub Tóth, Všetky práva vyhradené.
-		</footer>
-	</section>
+		</div>
 
+		<div class="footer" style="text-align: right; width: 40%;">
+			<a href="#detail-{{ project.url_name }}" class="large">
+				na začiatok <span class="rethink-sans large">↑</span>
+			</a>
+		</div>
+	</footer>
+	</section>
 {% endfor %}
 
 
 
 <section id="modal-info" class="modal">
 	<h2 class="large" style="margin-bottom: 80px;">Jakub Tóth</h2>
-	<a href="#" class="close svg-icon">
-		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 21.59 21.59">
-			<line class="st0" x1="1.13" y1="1.13" x2="20.45" y2="20.45"></line>
-			<line class="st0" x1="20.45" y1="1.13" x2="1.13" y2="20.45"></line>
-		</svg>
-	</a>
+	<a href="#" class="close rethink-sans">×</a>
 	<div class="row half">
 		<div class="large-text">
 			{{ site_setting.info_left_preview }}
@@ -171,18 +154,13 @@
 
 <section id="modal-contact" class="modal">
 	<h2 class="large" style="margin-bottom: 80px;">Kontakt</h2>
-	<a href="#" class="close svg-icon">
-		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 21.59 21.59">
-			<line class="st0" x1="1.13" y1="1.13" x2="20.45" y2="20.45"></line>
-			<line class="st0" x1="20.45" y1="1.13" x2="1.13" y2="20.45"></line>
-		</svg>
-	</a>
+	<a href="#" class="close rethink-sans">×</a>
 
 	<div class="row full">
 		<div>
 			<p class="large">
 				Jakub Tóth<br/>
-				Výtvarník & grafický dizajnér
+				Architektúra a grafický dizajn
 			</p>
 
 			<br/>
@@ -191,6 +169,14 @@
 			<p class="large">
 				jasomtoth@gmail.com<br/>
 				+421 918 518 708
+			</p>
+
+			<br/>
+
+			<h3 class="large">Atelier Tóth s.r.o.</h3>
+			<p class="large">
+				IČO: 56216203<br/>
+				IČ DPH: SK2122242870
 			</p>
 
 			<br/>

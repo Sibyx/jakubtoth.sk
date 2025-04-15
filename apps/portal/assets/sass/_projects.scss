@@ -27,7 +27,7 @@ figcaption {
 }
 
 div.project-container {
-  margin-top: 15rem;
+  margin-top: 13rem;
   padding: 0 clamp(50px, 10vw, 400px);
 }
 
@@ -42,6 +42,7 @@ div.project-container {
 	}
 
   	div.project-container {
+	  margin-top: 7rem;
 	  padding: 0 !important;
 	}
 }

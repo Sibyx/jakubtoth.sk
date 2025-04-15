@@ -79,11 +79,7 @@ module.exports = {
 				{
 					from: path.resolve(__dirname, 'apps', 'portal', 'assets', 'favicon.ico'),
 					to: path.resolve(__dirname, 'apps', 'portal', 'static', 'favicon.ico'),
-				},
-				{
-					from: path.resolve(__dirname, 'apps', 'portal', 'assets', 'RethinkSansVariableFont.ttf'),
-					to: path.resolve(__dirname, 'apps', 'portal', 'static', 'RethinkSansVariableFont.ttf'),
-				},
+				}
 			],
 		}),
 	],

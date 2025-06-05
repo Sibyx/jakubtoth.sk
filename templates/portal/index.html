@@ -60,7 +60,7 @@
 
 <section id="modal-projects" class="modal">
 	<h2 class="large" style="margin-bottom: 80px;">Projekty</h2>
-	<a href="#" class="close rethink-sans">×</a>
+	<a href="#" class="close">×</a>
 
 	<ul class="gallery">
 	{% for project in projects %}
@@ -92,7 +92,7 @@
 			</h2>
 
 			<a href="#description-{{ project.url_name }}" class="large">
-				popis projektu <span class="rethink-sans large">↓</span>
+				popis projektu <span class="large">↓</span>
 			</a>
 		</header>
 
@@ -102,7 +102,7 @@
 			</div>
 		</div>
 
-		<a href="#modal-projects" class="close rethink-sans">×</a>
+		<a href="#modal-projects" class="close">×</a>
 
 		<div class="project-container">
 			{% for row in project.image_rows.all %}
@@ -130,7 +130,7 @@
 
 		<div class="footer" style="text-align: right; width: 40%;">
 			<a href="#detail-{{ project.url_name }}" class="large">
-				na začiatok <span class="rethink-sans large">↑</span>
+				na začiatok <span class="large">↑</span>
 			</a>
 		</div>
 	</footer>
@@ -141,7 +141,7 @@
 
 <section id="modal-info" class="modal">
 	<h2 class="large" style="margin-bottom: 80px;">Jakub Tóth</h2>
-	<a href="#" class="close rethink-sans">×</a>
+	<a href="#" class="close">×</a>
 	<div class="row half">
 		<div class="large-text">
 			{{ site_setting.info_left_preview }}
@@ -154,7 +154,7 @@
 
 <section id="modal-contact" class="modal">
 	<h2 class="large" style="margin-bottom: 80px;">Kontakt</h2>
-	<a href="#" class="close rethink-sans">×</a>
+	<a href="#" class="close">×</a>
 
 	<div class="row full">
 		<div>
